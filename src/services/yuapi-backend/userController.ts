@@ -3,7 +3,7 @@
 import { request } from '@umijs/max';
 
 /** addUser POST /api/user/add */
-export async function addUserUsingPOST(body: API.UserAddRequest, options?: { [key: string]: any }) {
+export async function addUserUsingPost(body: API.UserAddRequest, options?: { [key: string]: any }) {
   return request<API.BaseResponselong>('/api/user/add', {
     method: 'POST',
     headers: {
@@ -15,7 +15,7 @@ export async function addUserUsingPOST(body: API.UserAddRequest, options?: { [ke
 }
 
 /** deleteUser POST /api/user/delete */
-export async function deleteUserUsingPOST(
+export async function deleteUserUsingPost(
   body: API.DeleteRequest,
   options?: { [key: string]: any },
 ) {
@@ -30,7 +30,7 @@ export async function deleteUserUsingPOST(
 }
 
 /** getUserById GET /api/user/get */
-export async function getUserByIdUsingGET(
+export async function getUserByIdUsingGet(
   // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.getUserByIdUsingGETParams,
   options?: { [key: string]: any },
@@ -45,7 +45,7 @@ export async function getUserByIdUsingGET(
 }
 
 /** getLoginUser GET /api/user/get/login */
-export async function getLoginUserUsingGET(options?: { [key: string]: any }) {
+export async function getLoginUserUsingGet(options?: { [key: string]: any }) {
   return request<API.BaseResponseUserVO>('/api/user/get/login', {
     method: 'GET',
     ...(options || {}),
@@ -53,7 +53,7 @@ export async function getLoginUserUsingGET(options?: { [key: string]: any }) {
 }
 
 /** listUser GET /api/user/list */
-export async function listUserUsingGET(
+export async function listUserUsingGet(
   // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.listUserUsingGETParams,
   options?: { [key: string]: any },
@@ -68,7 +68,7 @@ export async function listUserUsingGET(
 }
 
 /** listUserByPage GET /api/user/list/page */
-export async function listUserByPageUsingGET(
+export async function listUserByPageUsingGet(
   // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.listUserByPageUsingGETParams,
   options?: { [key: string]: any },
@@ -83,7 +83,7 @@ export async function listUserByPageUsingGET(
 }
 
 /** userLogin POST /api/user/login */
-export async function userLoginUsingPOST(
+export async function userLoginUsingPost(
   body: API.UserLoginRequest,
   options?: { [key: string]: any },
 ) {
@@ -98,7 +98,7 @@ export async function userLoginUsingPOST(
 }
 
 /** userLogout POST /api/user/logout */
-export async function userLogoutUsingPOST(options?: { [key: string]: any }) {
+export async function userLogoutUsingPost(options?: { [key: string]: any }) {
   return request<API.BaseResponseboolean>('/api/user/logout', {
     method: 'POST',
     ...(options || {}),
@@ -106,7 +106,7 @@ export async function userLogoutUsingPOST(options?: { [key: string]: any }) {
 }
 
 /** userRegister POST /api/user/register */
-export async function userRegisterUsingPOST(
+export async function userRegisterUsingPost(
   body: API.UserRegisterRequest,
   options?: { [key: string]: any },
 ) {
@@ -121,7 +121,7 @@ export async function userRegisterUsingPOST(
 }
 
 /** updateUser POST /api/user/update */
-export async function updateUserUsingPOST(
+export async function updateUserUsingPost(
   body: API.UserUpdateRequest,
   options?: { [key: string]: any },
 ) {
